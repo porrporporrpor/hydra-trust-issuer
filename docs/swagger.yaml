@@ -1,0 +1,37 @@
+definitions:
+  appresponse.responseSuccess:
+    properties:
+      code:
+        example: TRUST-2001
+        type: string
+      data: {}
+      message:
+        example: Success
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /healthcheck:
+    get:
+      consumes:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/appresponse.responseSuccess'
+      tags:
+      - HealthCheck
+  /metrics:
+    get:
+      consumes:
+      - application/json
+      responses:
+        "200":
+          description: Metrics information
+          schema:
+            type: string
+      tags:
+      - Metrics
+swagger: "2.0"

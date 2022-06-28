@@ -1,0 +1,8 @@
+linters:
+  enable:
+    - goimports
+    - gosec
+    - gosimple
+    - dupl
+    - goconst
+#    - golint
